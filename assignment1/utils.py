@@ -47,7 +47,7 @@ def print_table(data):
 def test_random_policy(policy, env):
     _acts = set()
     for i in range(1000):
-        act = policy(0)
+        act = policy[0]
         _acts.add(act)
         assert env.action_space.contains(act), "Out of the bound!"
     if len(_acts) != 1:
